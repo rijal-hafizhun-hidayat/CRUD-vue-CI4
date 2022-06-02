@@ -1,20 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'komik.index',
+    component: () => import("@/views/komik/Index.vue")
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/add',
+    name: 'komik.create',
+    component: () => import("@/views/komik/Create.vue")
+  },
+  {
+    path: '/edit/:id',
+    name: 'komik.edit',
+    component: () => import("@/views/komik/Edit.vue")
+  },
 ]
 
 const router = createRouter({
