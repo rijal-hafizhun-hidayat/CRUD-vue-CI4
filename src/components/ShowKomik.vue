@@ -77,7 +77,7 @@ export default {
             }
 
             find = find.filter(function(item){
-                if(item.nama.toLowerCase().indexOf(search) !== -1){
+                if(item.nama.toLowerCase().indexOf(search) !== -1 || item.penerbit.toLowerCase().indexOf(search) !== -1 || item.penulis.toLowerCase().indexOf(search) !== -1){
                     return item;
                 }
             })

@@ -52,7 +52,7 @@ export default {
             errors: []
         };
     },
-    created(){
+    mounted(){
         this.getKomikById();
     },
     methods:{
